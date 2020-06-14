@@ -1,4 +1,4 @@
-package com.vanc.javabasic.proxy.cglib;
+package com.vanc.javabasic.design.proxy.cglib;
 
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;

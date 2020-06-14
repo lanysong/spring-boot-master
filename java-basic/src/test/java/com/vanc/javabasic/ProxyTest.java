@@ -1,7 +1,7 @@
 package com.vanc.javabasic;
 
-import com.vanc.javabasic.proxy.cglib.CglibTarget;
-import com.vanc.javabasic.proxy.cglib.MyMethodInterceptor;
+import com.vanc.javabasic.design.proxy.cglib.CglibTarget;
+import com.vanc.javabasic.design.proxy.cglib.MyMethodInterceptor;
 import org.springframework.cglib.proxy.Enhancer;
 
 class ProxyTest {

@@ -1,4 +1,4 @@
-package com.vanc.javabasic.observerDesign;
+package com.vanc.javabasic.design.observer;
 public class OctalObserver extends Observer {
 
     public OctalObserver(Subject subject){

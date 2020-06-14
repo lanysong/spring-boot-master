@@ -1,4 +1,4 @@
-package com.vanc.javabasic.observerDesign;
+package com.vanc.javabasic.design.observer;
 
 public class BinaryObserver extends Observer {
     public BinaryObserver(Subject subject) {

@@ -1,4 +1,4 @@
-package com.vanc.javabasic.observerDesign;
+package com.vanc.javabasic.design.observer;
 
 import java.util.ArrayList;
 import java.util.List;

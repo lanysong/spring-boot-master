@@ -1,4 +1,4 @@
-package com.vanc.javabasic.proxy.cglib;
+package com.vanc.javabasic.design.proxy.cglib;
 
 public class CglibTarget {
     public String execute() {

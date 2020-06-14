@@ -1,8 +1,8 @@
 package com.vanc.javabasic;
 
-import com.vanc.javabasic.observerDesign.BinaryObserver;
-import com.vanc.javabasic.observerDesign.OctalObserver;
-import com.vanc.javabasic.observerDesign.Subject;
+import com.vanc.javabasic.design.observer.BinaryObserver;
+import com.vanc.javabasic.design.observer.OctalObserver;
+import com.vanc.javabasic.design.observer.Subject;
 
 public class ObserverPatternTest {
 
