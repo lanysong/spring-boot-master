@@ -8,7 +8,11 @@ import org.springframework.stereotype.Component;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
+/**
+ *
+ * @author : vanc.song@wetax.com.cn
+ * @date: ${YEAR}-${MONTH}-${DAY} ${HOUR}:${MINUTE}
+ */
 @Component
 public class SortFactory implements ApplicationContextAware {
     private Map<SortType,Sort> sortTypeSortMap = new ConcurrentHashMap<>();
