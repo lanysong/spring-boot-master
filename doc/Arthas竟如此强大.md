@@ -32,6 +32,7 @@ jad 具体类全限类名
 ```
 
 **查看x方法对应的堆栈信息**
+
 ```linux
 stack xxx.xxxx.X类 x方法
 ```
@@ -39,7 +40,8 @@ stack xxx.xxxx.X类 x方法
 
 重点的两个命令，可以看线上环境具体入参，出参
 
-**观察方法 xxx.xxxx.X类 x方法 执行的入参，仅当方法抛出异常时才输出。你能方便的观察到指定方法的调用情况。能观察到的范围为：返回值、抛出异常、入参，通过编写 OGNL 表达式进行对应变量的查看。**
+**你能方便的观察到指定方法的调用情况。能观察到的范围为：返回值、抛出异常、入参，通过编写 OGNL 表达式进行对应变量的查看。**
+
 ```linux
 观察方法出参和返回值
 $ watch demo.MathGame primeFactors "{params,returnObj}" -x 2
@@ -72,12 +74,25 @@ ts=2018-12-03 19:23:23; [cost=0.0353ms] result=@ArrayList[
 ]
 ```
 
+更多可以看
+
+[官方文档]: https://alibaba.github.io/arthas/watch
+
+
+
 **监控某个特殊方法的调用统计数据，包括总调用次数，平均rt，成功率等信息，每隔5秒输出一次。**
+
 ```linux
 monitor -c 5 xxx.xxxx.X类 x方法
 ```
 
 ## 小结
 最后定位到接口调用失败X方法没有移除任务队列导致无界队列一直增加，内存溢出。
+
+
+
+**从官方找到的一个知识图谱**
+
+![img](https://user-images.githubusercontent.com/1683936/71873638-a697b800-315a-11ea-9862-fbfa8e470064.png)
 
 
