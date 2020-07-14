@@ -22,6 +22,7 @@
 
 ------
 
-[Wiki]: https://wiki.jikexueyuan.com/list/back-end	" Wiki"
-[3y]: https://github.com/ZhongFuCheng3y/3y	" 3y"
+[wiki](https://wiki.jikexueyuan.com/list/back-end)
+
+[3y](https://github.com/ZhongFuCheng3y/3y)
 
