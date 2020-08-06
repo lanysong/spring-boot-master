@@ -7,4 +7,7 @@ package com.vanc.javabasic.leetcode;
 public class ListNode {
 	ListNode next;
 	Integer value;
+	
+	ListNode(int x) { value = x; }
+	
 }

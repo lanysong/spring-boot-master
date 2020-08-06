@@ -103,3 +103,44 @@ Redis的Sentinel组件会监视集群的状态，可能仅因为Sentinel组件�
 不管是降级还是熔断，都是为了保证了系统的稳定性，可用性。
 ```
 
+
+
+```
+聊项目的技术点，比如redis怎样保证高可用高性能，mq怎么保障一致性这些
+
+场景题，秒杀系统
+```
+
+```
+spring boot的自动装备,spring mvc流程，json接口有没有使用到viewResolve，spring里的事务传播机制结合一些场景分析,还有隔离级别,spring 有哪些后置处理器，如何编写一个starter，如何禁止一个starter，如何在一个没有注入容器中的对象中获取到bean，aop实现原理，配置变量先后顺序。。。
+```
+
+```
+查询冲突数据
+有一张会议室预约记录表(appoint)，查询出所有会议室时间冲突的预约记录
+id(预约ID) start_time(开始时间) end_time(结束时间) room_id(会议室ID) 
+1 201902021400 201902021600 1 
+2 201902021500 201902021600 1 
+3 201902021600 201902021700 1 
+
+
+java代码从list找出没有冲突的数据
+
+代码分析存在的问题，就一道库存超卖的问题
+
+考树的遍历了
+```
+
+```
+如何禁止一个starter?
+
+// 方案1，下面的代码段是使 DataSourceAutoConfiguration 无效：
+@EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
+public class MyConfiguration {}
+// 方案2
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+public class MyConfiguration { }
+// 方案3，在配置文件中配置
+spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+```
+

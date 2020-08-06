@@ -47,6 +47,7 @@ public class DemoTest {
 	
 	public static void main(String[] args) throws JsonProcessingException {
 		testStream();
+		ListIterator listIterator = Lists.newArrayList().listIterator();
 	}
 	
 	
