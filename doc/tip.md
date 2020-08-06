@@ -115,14 +115,32 @@ Redis的Sentinel组件会监视集群的状态，可能仅因为Sentinel组件�
 spring boot的自动装备,spring mvc流程，json接口有没有使用到viewResolve，spring里的事务传播机制结合一些场景分析,还有隔离级别,spring 有哪些后置处理器，如何编写一个starter，如何禁止一个starter，如何在一个没有注入容器中的对象中获取到bean，aop实现原理，配置变量先后顺序。。。
 ```
 
-```
+```mysql
 查询冲突数据
 有一张会议室预约记录表(appoint)，查询出所有会议室时间冲突的预约记录
 id(预约ID) start_time(开始时间) end_time(结束时间) room_id(会议室ID) 
 1 201902021400 201902021600 1 
 2 201902021500 201902021600 1 
 3 201902021600 201902021700 1 
-
+--冲突会议室
+SELECT
+	* 
+FROM
+	test_room a,
+	test_room b 
+WHERE
+	a.room_id = b.room_id 
+	AND a.id != b.id 
+	AND ( b.start_time BETWEEN a.start_time AND a.end_time ) UNION ALL
+SELECT
+	* 
+FROM
+	test_room a,
+	test_room b 
+WHERE
+	a.room_id = b.room_id 
+	AND a.id != b.id 
+	AND ( b.end_time > a.start_time AND b.end_time < a.end_time )
 
 java代码从list找出没有冲突的数据
 
