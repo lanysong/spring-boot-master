@@ -53,12 +53,12 @@ public class Solution3 {
 		}
 		
 		//t1和t2都有的节点，节点值比较，更新t1的值
-		t1.val = t1.val > t2.val ? t1.val : t2.val;
+		t1.val = Math.max(t1.val, t2.val);
 		
 		
 		//2 递归合并左子树和右子树
-		t1.left = mergeTreeNode(t1.left, t2.left);
-		t1.right = mergeTreeNode(t1.right, t2.right);
+		t1.left = mergeTreeNode1(t1.left, t2.left);
+		t1.right = mergeTreeNode1(t1.right, t2.right);
 		return t1;
 	}
 	
